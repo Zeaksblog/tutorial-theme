@@ -1,0 +1,124 @@
+/*
+Theme Name: Tutorial Theme
+Theme URI: http://yoursite/yourtheme
+Description: A child theme of 2012 default WordPress theme.
+Author: Your Name
+Author url: http://yoursite.com/
+Version: 1.0
+Tags: black, blue, white, fixed-width, custom-header, theme-options
+Template: twentytwelve
+*/
+@import url('../twentytwelve/style.css');
+
+/* Increase theme width to 1000px */
+@media screen and (min-width: 960px) { 
+    .site {
+        max-width: 1000px;
+        max-width: 71.4285rem;
+    }
+}
+.ie .site { max-width: 1000px; }
+
+footer[role="contentinfo"] {
+    max-width: 1000px;
+    max-width: 71.4285rem;
+}
+
+
+/* Left & Right Sidebars */
+@media screen and (min-width: 600px) { 
+    .custom-layout .site-content {
+        width: 50%;
+        margin-left: 25%;
+    }
+    .custom-layout .widget-area {
+        position: relative;
+        width: 20%;
+    }
+    .custom-layout #extra-sidebar {
+        float: left;
+        margin-left: -75%;
+        width: 20%;
+    }
+
+}
+/* IE8 and IE7 - Left and Right Sidebars */
+.ie  .custom-layout .site-content {
+    width: 50%;
+    margin-left: 25%;
+}
+.ie .custom-layout .widget-area {
+    float: right;
+    width: 20%;
+    position: relative;
+}
+.ie .custom-layout #extra-sidebar {
+    float: left;
+    margin-left: -75%;
+    width: 20%;
+}
+
+/* ===[ Footer Widget Areas ]=== */
+
+#footer-widgets {
+    width: 100%;
+    border-top: none;
+}
+#footer-widgets .widget li { list-style-type: none; }
+
+.template-front-page #footer-widgets { padding-top: 0; }
+
+@media screen and (min-width: 600px) { 
+    #footer-widgets.three .widget {
+        float: left;
+        margin-right: 3.7%;
+        width: 30.85%;
+    }
+    #footer-widgets.three .widget + .widget + .widget { margin-right: 0; }
+}
+
+/* for IE8 and IE7 */
+.ie #footer-widgets.three .widget {
+    float: left;
+    margin-right: 3.7%;
+    width: 29.85%;
+    clear: none;
+}
+.ie #footer-widgets.three .widget + .widget + .widget { margin-right: 0; }
+
+/* Hide footer widgets Homepage Template */
+.template-front-page #footer-widgets { display: none; }
+
+
+
+
+/* ===[ IE Homepage Template Widget fix ]=== */
+.ie .template-front-page .first.front-widgets,
+.ie .template-front-page.two-sidebars .widget-area .front-widgets {
+    float: left;
+    margin-bottom: 24px;
+    width: 51.875% ;
+}
+.ie .template-front-page .second.front-widgets { clear: right; }
+.ie .template-front-page .first.front-widgets,
+.ie .template-front-page.two-sidebars .widget-area .front-widgets + .front-widgets {
+    float: right;
+    margin: 0 0 24px;
+    width: 39.0625% ;
+}
+.ie .template-front-page.two-sidebars .widget,
+.ie .template-front-page.two-sidebars .widget:nth-child(even) { float: none; }
+.ie .template-front-page .widget-area { clear: both; }
+
+.ie .template-front-page .widget {
+    width: 100% !important;
+    border: none;
+}
+.ie .template-front-page .first.front-widgets { 
+	width: 51.875%;
+    float: left ;
+}
+.ie  .template-front-page .second.front-widgets {
+    width: 39.0625%;
+    float: right ;
+}
