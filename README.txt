@@ -1,0 +1,1 @@
+A Twenty Twelve child theme based on the tutorials from http://zeaks.org/tutorials/twenty-twelve-theme-three-column-layout/ a 5 part tutorial series on modifying Twenty Twelve theme.
