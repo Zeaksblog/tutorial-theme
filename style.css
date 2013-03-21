@@ -59,35 +59,39 @@ footer[role="contentinfo"] {
 }
 
 /* ===[ Footer Widget Areas ]=== */
-
+.site-info { clear: both; }
 #footer-widgets {
     width: 100%;
     border-top: none;
 }
 #footer-widgets .widget li { list-style-type: none; }
-
 .template-front-page #footer-widgets { padding-top: 0; }
-
 @media screen and (min-width: 600px) { 
-    #footer-widgets.three .widget {
-        float: left;
-        margin-right: 3.7%;
-        width: 30.85%;
-    }
-    #footer-widgets.three .widget + .widget + .widget { margin-right: 0; }
+#footer-widgets.three .widget + .widget + .widget {
+    margin-right: 1.71429rem;
 }
 
+#footer-widgets.three .widget {
+    clear: none;
+    float: left;
+    margin-right: 1.71429rem;
+    max-width: 30.85%;
+    width: 30.85%;
+	}
+}
 /* for IE8 and IE7 */
 .ie #footer-widgets.three .widget {
     float: left;
-    margin-right: 3.7%;
+    margin-right: 3.1%;
     width: 29.85%;
     clear: none;
 }
-.ie #footer-widgets.three .widget + .widget + .widget { margin-right: 0; }
+.ie #footer-widgets.three .widget + .widget + .widget { margin-right: 3.1%; }
 
-/* Hide footer widgets Homepage Template */
-.template-front-page #footer-widgets { display: none; }
+/* Hide footer widgets Homepage Template and BBpress */
+.template-front-page #footer-widgets,
+.bbPress #footer-widgets,
+.grid #footer-widgets { display: none; }
 
 
 
