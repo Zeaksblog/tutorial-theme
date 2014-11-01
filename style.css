@@ -59,24 +59,34 @@ footer[role="contentinfo"] {
 }
 
 /* ===[ Footer Widget Areas ]=== */
+
 .site-info { clear: both; }
+
 #footer-widgets {
     width: 100%;
     border-top: none;
 }
-#footer-widgets .widget li { list-style-type: none; }
-.template-front-page #footer-widgets { padding-top: 0; }
-@media screen and (min-width: 600px) { 
-#footer-widgets.three .widget + .widget + .widget {
-    margin-right: 1.71429rem;
+#footer-widgets .widget li { 
+    list-style-type: none; 
 }
 
-#footer-widgets.three .widget {
-    clear: none;
+@media screen and (min-width: 960px) {
+.widget-left {
     float: left;
-    margin-right: 1.71429rem;
-    max-width: 30.85%;
-    width: 30.85%;
+    margin-right: 3.5%;
+    width: 31%;
+    clear: none;
+}
+.widget-center {
+    float: left;
+    width: 31%;
+    clear: none;
+}
+.widget-right {
+    float: right;
+    width: 31%;
+    margin-left: 3.5%;
+    clear: none;
 	}
 }
 /* for IE8 and IE7 */

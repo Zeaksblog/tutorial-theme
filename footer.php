@@ -13,23 +13,30 @@
 	</div><!-- #main .wrapper -->
 	<footer id="colophon" role="contentinfo">
 	
-		<?php
-			/* footer sidebar */
-			if ( ! is_404() ) : ?>
-				<div id="footer-widgets" class="widget-area three">
-					<?php if ( is_active_sidebar( 'sidebar-5' ) ) : ?>
-						<?php dynamic_sidebar( 'sidebar-5' ); ?>
-					<?php endif; ?>
-
-					<?php if ( is_active_sidebar( 'sidebar-6' ) ) : ?>
-						<?php dynamic_sidebar( 'sidebar-6' ); ?>
-					<?php endif; ?>
-
-					<?php if ( is_active_sidebar( 'sidebar-7' ) ) : ?>
-						<?php dynamic_sidebar( 'sidebar-7' ); ?>
-					<?php endif; ?>
-				</div><!-- #footer-widgets -->
-		<?php endif; ?>
+<?php 
+/* footer sidebar */ 
+if ( ! is_404() ) : ?> 
+	<div id="footer-widgets" class="widget-area three"> 
+		 
+		<div class="widget-left"> 
+			<?php if ( is_active_sidebar( 'sidebar-5' ) ) : ?> 
+					<?php dynamic_sidebar( 'sidebar-5' ); ?> 
+			<?php endif; ?> 
+		</div> 
+ 
+		<div class="widget-center"> 
+			<?php if ( is_active_sidebar( 'sidebar-6' ) ) : ?> 
+			<?php dynamic_sidebar( 'sidebar-6' ); ?> 
+			<?php endif; ?> 
+		</div> 
+ 
+		<div class="widget-right"> 
+			<?php if ( is_active_sidebar( 'sidebar-7' ) ) : ?> 
+					<?php dynamic_sidebar( 'sidebar-7' ); ?> 
+			<?php endif; ?> 
+		</div> 	
+	</div><!-- #footer-widgets --> 							
+<?php endif; ?>
 	
 		<div class="site-info">
 			<?php do_action( 'twentytwelve_credits' ); ?>
